@@ -1,10 +1,11 @@
 import React, { useEffect, useState, useMemo, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "../styles/components/App.css";
 
 const App = () => {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
+  const history = useHistory();
   const handleSearch = (event) => {
     setSearch(event.target.value);
   };
@@ -21,6 +22,10 @@ const App = () => {
       .then((res) => setData(res.results));
   });
 
+  const handleClick = () => {
+    history.push("/checkout");
+  };
+
   return (
     <div>
       <input
@@ -35,7 +40,9 @@ const App = () => {
           <div className="container">
             <div className="title">{datas.name}</div>
             <div className="message">{datas.location.url}</div>
-            <button className="button">Comprar</button>
+            <button className="button" onClick={handleClick}>
+              Comprar
+            </button>
           </div>
         ))}
       </div>

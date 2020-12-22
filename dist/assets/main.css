@@ -1,3 +1,29 @@
+.darkmode-button {
+  position: absolute;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-button {
+  display: flex;
+}
+
+.header-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(138, 138, 236);
+}
+
+/* .layout {
+  display: flex;
+  justify-content: space-between;
+} */
+
 .search_input {
   margin-top: 0.5rem;
   border-radius: 0.5rem;
@@ -56,3 +82,28 @@
     width: 100%;
   }
 }
+
+.App {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.bg_light {
+  background-color: #fff;
+  color: #131c21;
+  height: 100vh;
+}
+
+.bg_dark {
+  background-color: #131c21;
+  color: #fff;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 62.5%;
+  font-size: 1rem;
+}
+

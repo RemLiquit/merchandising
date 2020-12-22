@@ -1,53 +1,7 @@
-.darkmode {
+div i {
+  cursor: pointer;
+}
+
+.darkmode-button {
   position: absolute;
-  /* top: 0.5rem; */
-}
-
-@media screen and (max-width: 320px) {
-  .darkmode {
-    top: 1%;
-    left: 80%;
-  }
-}
-@media screen and (min-width: 320px) {
-  .darkmode {
-    top: 1%;
-    left: 85%;
-  }
-}
-
-@media screen and (min-width: 425px) {
-  .darkmode {
-    left: 88%;
-  }
-}
-@media screen and (min-width: 500px) {
-  .darkmode {
-    left: 87%;
-  }
-}
-@media screen and (min-width: 650px) {
-  .darkmode {
-    left: 90%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .darkmode {
-    left: 94%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .darkmode {
-    left: 96%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .darkmode {
-    left: 96%;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .darkmode {
-    left: 97%;
-  }
 }

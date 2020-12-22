@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-button {
+  display: flex;
+}
+
+.header-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+}

@@ -74,5 +74,6 @@ module.exports = {
     historyApiFallback: true,
     open: true,
     port: 3005,
+    disableHostCheck: true,
   },
 };

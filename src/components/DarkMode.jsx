@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import ThemeContext from "../context/ThemeContext";
 import "../styles/components/DarkMode.css";
 
@@ -13,13 +14,7 @@ const DarkMode = () => {
 
   return (
     <div className="darkmode">
-      <button
-        type="darkmode-button"
-        onClick={handleClick}
-        className="header_button"
-      >
-        <i class="fas fa-adjust"></i>
-      </button>
+      <i onClick={handleClick} class="fas fa-adjust" />
     </div>
   );
 };
