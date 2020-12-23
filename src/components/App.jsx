@@ -5,10 +5,10 @@ import "../styles/components/App.css";
 const App = () => {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
-  const history = useHistory();
   const handleSearch = (event) => {
     setSearch(event.target.value);
   };
+  const history = useHistory();
 
   const filteredUser = useMemo(() =>
     data.filter((user) => {
