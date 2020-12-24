@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/",
+    publicPath: "/public",
   },
   resolve: {
     extensions: [".js", ".jsx"],
@@ -22,23 +22,13 @@ module.exports = {
         },
       },
       {
-        test: /\.svg$/,
-        use: [
-          {
-            loader: "svg-url-loader",
-            options: {
-              limit: 100000,
-            },
+        test: /\.(jpg|png|gif)$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 90000,
           },
-        ],
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: "file-loader",
-          },
-        ],
+        },
       },
       {
         test: /\.html$/,

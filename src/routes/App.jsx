@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ThemeContext from "../context/ThemeContext";
+import AppContext from "../context/AppContext";
 import Layout from "../components/Layout";
 import Home from "../container/Home";
 import Checkout from "../container/Checkout";
 import NotFound from "../container/NotFound";
-import AppContext from "../context/AppContext";
 import useInitialState from "../hooks/useInitialState";
 import "../styles/routes/App.css";
 
@@ -14,7 +14,7 @@ const App = () => {
   const initialState = useInitialState();
   return (
     <ThemeContext.Provider value={{ theme, updateTheme }}>
-      <AppContext.Provider value={{ initialState }}>
+      <AppContext.Provider value={initialState}>
         <BrowserRouter>
           <div className={"App " + theme}>
             <Layout>

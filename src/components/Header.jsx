@@ -5,8 +5,10 @@ import DarkMode from "./DarkMode";
 import "../styles/components/Header.css";
 
 const Header = () => {
-  const history = useHistory();
+  const { state } = useContext(AppContext);
+  const { cart } = state;
 
+  const history = useHistory();
   const handleClick = () => {
     history.push("/checkout");
   };
@@ -14,6 +16,7 @@ const Header = () => {
   return (
     <div className="header">
       <i class="fas fa-shopping-cart" onClick={handleClick} />
+      {cart.length > 0 && <div className="Header-alert">{cart.length}</div>}
       <Link to="/" className="header-link">
         <h1>Merchandising</h1>
       </Link>

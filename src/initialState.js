@@ -6,7 +6,7 @@ export default {
     {
       id: "1",
       image: "https://arepa.s3.amazonaws.com/mug.png",
-      // image: "../../public/clothes/1.jpg",
+      // image: "/assets/clothes/1.jpg",
       title: "Camiseta",
       price: 25,
       size: [
@@ -16,7 +16,6 @@ export default {
           large: "l",
           extra: "xl",
         },
-        ,
       ],
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     },

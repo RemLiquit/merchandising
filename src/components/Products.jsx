@@ -1,16 +1,18 @@
-import React, { useContext } from "react";
-import Product from "./Product";
+import React, { useContext, useState, useMemo } from "react";
 import AppContext from "../context/AppContext";
-// import "../styles/components/Products.css";
+import Product from "./Product";
+import "../styles/components/Products.css";
 
 const Products = () => {
-  const { state, addToCart } = useContext(AppContext);
+  const { state } = useContext(AppContext);
   const { products } = state;
-
   const [search, setSearch] = useState("");
-
   const handleSearch = (event) => {
     setSearch(event.target.value);
+  };
+
+  const handleAddToCart = (product) => () => {
+    addToCart(product);
   };
 
   const filteredUser = useMemo(() =>
@@ -19,12 +21,8 @@ const Products = () => {
     })
   );
 
-  const handleAddToCart = (product) => () => {
-    addToCart(product);
-  };
-
   return (
-    <div className="Products">
+    <div>
       <input
         className="search_input"
         type="text"
@@ -33,7 +31,7 @@ const Products = () => {
         placeholder="Search"
       />
       <div className="Products-items">
-        {products.map((product) => (
+        {filteredUser.map((product) => (
           <Product
             key={product.id}
             product={product}

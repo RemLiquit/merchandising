@@ -1,6 +1,6 @@
 import { useState } from "react";
 import initialState from "../initialState";
-
+import { Link, useHistory } from "react-router-dom";
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
 
@@ -10,11 +10,10 @@ const useInitialState = () => {
       cart: [...state.cart, payload],
     });
   };
-
   const removeFromCart = (payload) => {
     setState({
       ...state,
-      cart: state.cart.filter((items) => items.id !== payload.id),
+      cart: state.cart.filter((items) => items.id != payload.id),
     });
   };
 
