@@ -20,6 +20,7 @@ const Checkout = () => {
 
   return (
     <div className="Checkout">
+      {console.log(cart)}
       <div className="Checkout-content">
         {cart.length > 0 ? (
           <h3>Lista de Articulos:</h3>
@@ -30,11 +31,12 @@ const Checkout = () => {
           <div className="Checkout-item">
             <div className="Checkout-element">
               <h4>{item.title}</h4>
+              {/* {console.log(cart} */}
+              {/* <h4>{item.size}</h4> */}
               <span>${item.price}</span>
             </div>
-            <button type="button" onClick={handleRemove(item)}>
-              <i className="fas fa-trash-alt" />
-            </button>
+            &nbsp;{" "}
+            <i className="far fa-trash-alt" onClick={handleRemove(item)} />
           </div>
         ))}
       </div>

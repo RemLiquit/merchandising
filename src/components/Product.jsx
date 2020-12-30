@@ -12,6 +12,23 @@ const Product = ({ product, handleAddToCart }) => {
         </h2>
         <p>{product.description}</p>
       </div>
+      <div className="Products-select">
+        <div className="Products-select-size">
+          <select id={product.id} onSelect={handleAddToCart(product)}>
+            <option>small</option>
+            <option>medium</option>
+            <option>large</option>
+            <option>extra</option>
+          </select>
+        </div>
+        <div className="Products-select-number">
+          <input
+            type="number"
+            defaultValue="1"
+            onChange={handleAddToCart(product)}
+          />
+        </div>
+      </div>
       <button type="button" onClick={handleAddToCart(product)}>
         Comprar
       </button>

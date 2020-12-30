@@ -1,12 +1,13 @@
 import React, { useContext, useState, useMemo } from "react";
-import AppContext from "../context/AppContext";
 import Product from "./Product";
+import AppContext from "../context/AppContext";
 import "../styles/components/Products.css";
 
 const Products = () => {
-  const { state } = useContext(AppContext);
-  const { products } = state;
   const [search, setSearch] = useState("");
+  const { state, addToCart } = useContext(AppContext);
+  const { products } = state;
+
   const handleSearch = (event) => {
     setSearch(event.target.value);
   };
