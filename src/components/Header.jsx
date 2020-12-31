@@ -18,9 +18,7 @@ const Header = () => {
     <div className="header">
       <div style={{ display: "flex" }}>
         <i class="fas fa-shopping-cart" onClick={handleClick} />
-        {cart.length > 0 && (
-          <div className="Header-alert">&nbsp; {cart.length}</div>
-        )}
+        {cart.length > 0 && <div className="Header-alert">{cart.length}</div>}
       </div>
       <Link to="/" className="header-link">
         <h1>Merchandising</h1>
