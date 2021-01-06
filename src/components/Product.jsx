@@ -14,7 +14,7 @@ const Product = ({ product, handleAddToCart }) => {
       </div>
       <div className="Products-select">
         <div className="Products-select-size">
-          <select id={product.id} onSelect={handleAddToCart(product)}>
+          <select id={product.id}>
             <option>small</option>
             <option>medium</option>
             <option>large</option>
@@ -22,11 +22,7 @@ const Product = ({ product, handleAddToCart }) => {
           </select>
         </div>
         <div className="Products-select-number">
-          <input
-            type="number"
-            defaultValue="1"
-            onChange={handleAddToCart(product)}
-          />
+          <input type="number" defaultValue="1" min="0" />
         </div>
       </div>
       <button type="button" onClick={handleAddToCart(product)}>

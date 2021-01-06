@@ -1,0 +1,59 @@
+.footer {
+  align-self: center;
+}
+
+.footer h1 {
+  font-size: 0.8rem;
+}
+
+.footer h2 {
+  font-size: 0.7rem;
+}
+
+.footer p {
+  font-size: 0.6rem;
+}
+
+.footer-contact h1 {
+  text-align: start;
+}
+.footer-contact p {
+  text-align: start;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 0.5rem;
+  width: 85%;
+  background: rgb(187, 187, 187);
+}
+
+.footer-contact-container {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.footer-elements {
+  display: flex;
+  margin: auto;
+  width: 60%;
+}
+
+.footer-element-text {
+  display: inline;
+  text-align: start;
+  margin-left: 0.5rem;
+}
+
+.footer-icons i {
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+@media (max-width: 320px) {
+  .footer-icons i {
+    font-size: 1.5rem;
+  }
+}
