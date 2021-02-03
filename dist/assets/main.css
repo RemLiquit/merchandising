@@ -1,14 +1,96 @@
+.footer {
+  align-self: center;
+}
+
+.footer h1 {
+  font-size: 0.8rem;
+}
+
+.footer h2 {
+  font-size: 0.7rem;
+}
+
+.footer p {
+  font-size: 0.6rem;
+}
+
+.footer-contact h1 {
+  text-align: start;
+}
+.footer-contact p {
+  text-align: start;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 0.5rem;
+  width: 85%;
+  background: rgb(187, 187, 187);
+}
+
+.footer-contact-container {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.footer-elements {
+  display: flex;
+  margin: auto;
+  width: 60%;
+}
+
+.footer-element-text {
+  display: inline;
+  text-align: start;
+  margin-left: 0.5rem;
+}
+
+.footer-icons i {
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+@media (max-width: 320px) {
+  .footer-icons i {
+    font-size: 1.5rem;
+  }
+}
+
 div i {
   cursor: pointer;
+  font-size: 1.5rem;
 }
 
 .darkmode-button {
   position: absolute;
 }
 
+@media (max-width: 320px) {
+  div i {
+    font-size: 1rem;
+  }
+}
+
 .header {
   display: flex;
   justify-content: space-between;
+  height: 5vh;
+  align-items: center;
+}
+
+.header i {
+  margin-right: 0.5rem;
+}
+
+.Header-alert {
+  background: red;
+  width: 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-button {
@@ -23,23 +105,35 @@ div i {
   color: inherit;
 }
 
-/* .layout {
-  display: flex;
-  justify-content: space-between;
-} */
+@media (max-width: 320px) {
+  .Header-alert {
+    background: red;
+    width: 1rem;
+    border-radius: 1rem;
+  }
+}
+
+.search_input {
+  margin: 1rem auto;
+  text-align: center;
+  border-radius: 0.5rem;
+}
 
 .Products-items {
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.5rem;
-  grid-row-gap: 1.5em;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* padding: 1rem; */
 }
 .Products-item {
   text-decoration: none;
-  box-shadow: 8px 14px 38px rgba(39,44,49,0.06), 1px 3px 8px rgba(39,44,49,0.03);
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
+    1px 3px 8px rgba(39, 44, 49, 0.03);
   border-radius: 5px;
-  margin: 0 0 20px 0;
+  margin: 1rem;
   position: relative;
+  width: 300px;
+  height: 370px;
 }
 .Products-item-info {
   padding: 10px;
@@ -49,6 +143,7 @@ div i {
   font-weight: bold;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 .Products-item-info h2 span {
   color: #33b13a;
@@ -75,14 +170,44 @@ div i {
   font-weight: 300;
 }
 .Products-item button:hover {
-  background-color: rgba(39,44,49,0.06);
+  background-color: rgba(39, 44, 49, 0.06);
 }
+
+.Products-select {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 1rem;
+}
+
+.Products-select-size select {
+  width: 4.5rem;
+  font-size: 0.9rem;
+}
+.Products-select-size select option {
+  font-size: 0.9rem;
+}
+.Products-select-number {
+  width: 2rem;
+}
+.Products-select-number input {
+  text-align: center;
+  width: 2rem;
+  font-size: 0.8rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .Checkout {
   grid-template-columns: 3fr 1fr;
   grid-gap: 2rem;
   grid-row-gap: 1.5em;
   display: grid;
   padding: 0 0 4em 0;
+  /* height: 80vh; */
 }
 .Checkout-item {
   display: flex;
@@ -92,7 +217,7 @@ div i {
 }
 .Checkout-item .fas {
   margin: 0 0 0 10px;
-  color: rgba(0,0,0,0.4);
+  color: rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
 .Checkout-item button {
@@ -111,29 +236,35 @@ div i {
   margin: 0;
 }
 
+.Checkout-image {
+  width: 2rem;
+  height: 2rem;
+}
+
 .Checkout-sidebar button {
   box-shadow: inset 0px 1px 0px 0px #bee2f9;
-    background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
-    background-color: #63b8ee;
-    border-radius: 6px;
-    border: 1px solid #3866a3;
-    display: inline-block;
-    cursor: pointer;
-    color: #14396a;
-    font-family: Arial;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 6px 24px;
-    text-decoration: none;
-    text-shadow: 0px 1px 0px #7cacde;
-    width: 100%;
-    display: block;
-    outline: none;
+  background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+  background-color: #63b8ee;
+  border-radius: 6px;
+  border: 1px solid #3866a3;
+  display: inline-block;
+  cursor: pointer;
+  color: #14396a;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #7cacde;
+  width: 100%;
+  display: block;
+  outline: none;
 }
 
 a {
   text-decoration: none;
 }
+
 .App {
   text-align: center;
   padding: 0.5rem;
@@ -148,7 +279,7 @@ a {
 .bg_dark {
   background-color: #131c21;
   color: #fff;
-  height: 100vh;
+  height: 100%;
 }
 
 * {
